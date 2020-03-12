@@ -16,12 +16,12 @@ html {
 }
 body {
     font-family: 'Montserrat';
+    background: #f2f2f2;
 }
 header {
     width: 100%;
     background-color: var(--primary);
     top: 0;
-    position: fixed;
 }
 
 .logo h2 {
@@ -49,6 +49,9 @@ header {
     font-size: 1em;
 }
 
+.enlaces a:last-of-type {
+    background-color: var(--secondary);
+}
 @media(min-width:768px){
     .menu, .enlaces {
         flex-direction: row;
@@ -56,7 +59,6 @@ header {
 }
 
 .hero {
-    margin-top: 4em;
     position: relative;
     height: 35em;
     background: url(../images/hero.png) no-repeat center;
@@ -75,6 +77,11 @@ header {
     display: flex;
     flex-direction: column;
 }
+@media(min-width:768px){
+    .hero-content{
+        flex-direction: row;
+    }
+}
 .hero-content img {
     width: 30em;
     height: auto;
@@ -83,4 +90,116 @@ header {
 .descripcion {
     color: var(--white);
     flex: 1;
+}
+
+.plan {
+    margin-top: 4em;
+    text-align: center;
+    color: var(--dark);
+    margin-bottom: 4em;
+}
+
+.c-planes {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+    color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media(min-width:768px){
+    .c-planes{
+        flex-direction: row;
+    }
+}
+.c-plan {
+    flex: 1;
+    text-align: center;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.5em;
+}
+
+.specs {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.specs img, .s-des{
+    display: inline-block;
+}
+
+.primero,.segundo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.primero div,.segundo div {
+    flex: 1;
+    background: var(--white);
+    margin-left: 1em;
+    padding: 2em;
+}
+
+
+@media(min-width:768px){
+    .primero,.segundo {
+        flex-direction: row;
+    }
+}
+
+.contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+}
+
+.contacto a {
+    text-decoration: none;
+    color: var(--primary);
+}
+.contacto p {
+    color: var(--gray);
+}
+.contacto div {
+    flex: 1;
+    text-align: center;
+}
+
+.contacto div:first-of-type{
+    flex: 3;
+    text-align: justify;
+}
+.contacto div a{
+    display: block;
+}
+
+footer p {
+    text-align: center;
+    padding: 2em;
+    color: var(--gray);
+}
+
+i {
+    color: var(--gray);
+}
+
+.plan h1 {
+    color: var(--primary);
+}
+
+.specs h3 {
+    color: var(--primary);
+}
+
+.c-plan h2 {
+    color: var(--primary);
 }
